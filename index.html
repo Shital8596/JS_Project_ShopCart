@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+    <title>Shop Cart</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale = 1.0">
+</html>
+<body>
+    <nav id="nav">
+    <div class="navTop">
+        <div class="navItem">
+            <img src="images/lobo.jpg" alt="lobo" width="45" height="45" style="border-radius:100% ;">
+        </div>
+        <div class="navItem">
+            <div class="search">
+                <input type="text" placeholder="Search..." class="inputSearch"><i class="fa fa-search" style="margin-left:5px ;"></i>
+            </div>
+        </div>
+        <div class="navItem">
+            <span class="offer">Limited Offers!!!</span>
+        </div>
+        <div class="navItem">
+            <img src="images/cart.png" width="40px" class="cartImage"><span id="navSpan">0</span>
+        </div>
+    </div>
+    <div class="navBottom">
+        <h3 class="menuItem">TITAN</h3>
+        <h3 class="menuItem">ROLEX</h3>
+        <h3 class="menuItem">MAXIMA</h3>
+        <h3 class="menuItem">SONATA</h3>
+        <h3 class="menuItem">APPLE</h3>
+    </div>
+</nav>
+
+            <!-- Slider Page -->
+
+<div class="slider">
+    <div class="sliderWrapper">
+        <div class="sliderItem">
+            <img src="images/titan.jpg" class="slideImg">
+            <h1 class="sliderTitle">TITAN <br>NEW <br>SEASON</h1>
+            <h2 class="sliderPrice">$119</h2>
+            <a href="#product">
+                <button class="buybtn">BUY NOW!</button>
+            </a>
+        </div>
+        <div class="sliderItem">
+            <img src="images/rolex.jpg" class="slideImg">
+            <h1 class="sliderTitle">ROLEX</h1>
+            <h2 class="sliderPrice">$150</h2>
+            <a href="#product">
+                <button class="buybtn">BUY NOW!</button>
+            </a>
+        </div>
+        <div class="sliderItem">
+            <img src="images/maxima.jpg" class="slideImg">
+            <h1 class="sliderTitle">MAXIMA</h1>
+            <h2 class="sliderPrice">$140</h2>
+            <a href="#product">
+                <button class="buybtn">BUY NOW!</button>
+            </a>
+        </div>
+        <div class="sliderItem">
+            <img src="images/sonata.avif" class="slideImg">
+            <h1 class="sliderTitle">SONATA</h1>
+            <h2 class="sliderPrice">$120</h2>
+            <a href="#product">
+                <button class="buybtn">BUY NOW!</button>
+            </a>
+        </div>
+        <div class="sliderItem">
+            <img src="images/apple.jpg" class="slideImg">
+            <h1 class="sliderTitle">APPLE</h1>
+            <h2 class="sliderPrice">$110</h2>
+            <a href="#product">
+                <button class="buybtn">BUY NOW!</button>
+            </a>
+        </div>
+    </div>
+
+                <!-- Cart Page -->
+
+    <div class="cartContainer">
+        <h1 style="text-align:center ;">Your Cart</h1>
+        <div class="cartInData">
+        <div class="cart">
+            <h5 class="cartTitle">Product</h5>
+            <h5 class="cartPrice">Price</h5>
+            <h5 class="cartQuantity">Quantity</h5>
+            <h5 class="cartTotal">Total</h5>
+        </div>
+        <div class="cartProducts">
+            <div class="cartproduct">
+                <button onclick="decreaseNum()"><i class="fa fa-remove cIcon"></i></button>
+                <img src="images/titan.jpg"  class="cartImg">
+                <span class="cartSTitle">Titan</span>
+            </div>
+            <p>$<span class="cprice" id="cprice">150.00</span></p>
+            <div class="cQuantity">
+                <button onclick="decreaseNum('cartInput','ctotal')"><i class="fa fa-minus"></i></button>
+                <input type="text" id="cartInput" class="cartInput" value="1" >
+                <button onclick="increaseNum('cartInput','ctotal')"><i class="fa fa-plus"></i></button>
+            </div>
+            <div>
+                $<span class="ctotal" id="ctotal">0.00</span>
+            </div>
+        </div>
+        <span class="shipping">+ shipping Charge : $10</span>
+        <div class="bascketTotalC">
+            <h4 class="bascketTotalT">Bascket Total</h4>
+            <h4>$<span class="bascketTotal">0.00</span></h4>
+        </div>
+    </div>
+        <span class="cartClose">X</span>
+    </div>
+
+</div>
+                    <!-- Features -->
+    <div class="feature">
+        <div class="features">
+            <img src="images/shipping.png" alt="no Img" class="featureImg">
+            <span class="featureTitle">FREE SHIPPING</span>
+            <span class="featureDesk">Free home delivery across the India</span>
+        </div>
+        <div class="features">
+            <img src="images/return.png" alt="no Img" class="featureImg">
+            <span class="featureTitle">15 DAYS RETURN </span>
+            <span class="featureDesk">Easy refund in 15 days</span>
+        </div>
+        <div class="features">
+            <img src="images/gift.jpg" alt="no Img" class="featureImg" style="background-color:aquamarine ;">
+            <span class="featureTitle">GIFT CARDS</span>
+            <span class="featureDesk">Buy gift cards and use coupon code easily</span>
+        </div>
+        <div class="features">
+            <img src="images/telegram.png" alt="no Img" class="featureImg">
+            <span class="featureTitle">CONTACT US</span>
+            <span class="featureDesk">Contact us via email helpline number</span>
+        </div>
+    </div>
+
+
+                    <!-- Product page -->
+    <div class="product" id="product">
+        <img src="images/titan.jpg" alt="" class="productImg">
+        <div class="productDetail">
+            <h1 class="productTitle">TITAN</h1>
+            <h2>$<span class="productPrice">119</span></h2>
+            <p class="productDisc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium quam, ducimus facere incidunt aliquid dolor qui necessitatibus libero, soluta blanditiis cupiditate, sequi nisi provident !</p>
+        <div class="colors">
+            <img src="images/titan.jpg" alt="" class="color">
+            <img src="images/Titan.png" alt="" class="color">
+        </div>
+        <div class="sizes">
+            <div class="size">42</div>
+            <div class="size">43</div>
+            <div class="size">44</div>
+        </div>
+        <button class="cartBtn">Add to Cart</button>
+        <button class="productBtn">BUY NOW !</button>
+    </div>
+
+            <!-- Payment Section -->
+
+    <div class="payment">
+        <h1 class="payTitle">Personal Information</h1>
+        <label>Name and Surname</label>
+        <input type="text" placeholder="Enter your name" class="payInput">
+        <label>Phone Number</label>
+        <input type="text" placeholder="Enter your number" class="payInput">
+        <label>Address</label>
+        <input type="text" placeholder="Enter your address" class="payInput">
+        <h1 class="payTitle">Card Information</h1>
+        <div class="cardIcons">
+            <img src="images/visa.jpg" width="40" alt="no Img" class="cardIcon">
+            <img src="images/master.png" width="40" alt="no Img" class="cardIcon">
+        </div>
+        <input type="password" class="payInput" placeholder="Card Number">
+        <div class="cardInfo">
+            <input type="text" class="payInput sm" placeholder="mm">
+            <input type="text" class="payInput sm" placeholder="yyyy">
+            <input type="text" class="payInput sm" placeholder="cvv">
+        </div>
+        <button class="payBtn">Checkout!</button>
+        <span class="close">X</span>
+    </div>
+</div>
+
+                <!-- Footer Section -->
+<footer>
+    <div class="footerLeft">
+        <div class="footerMenu">
+            <h1 class="fMenuTitle">About Us</h1>
+            <ul class="fMenuList">
+                <li class="fListItem">Company</li>
+                <li class="fListItem">Contact</li>
+                <li class="fListItem">Careers</li>
+                <li class="fListItem">Affiliates</li>
+                <li class="fListItem">Stores</li>
+            </ul>
+        </div>
+        <div class="footerMenu">
+            <h1 class="fMenuTitle">Useful Links</h1>
+            <ul class="fMenuList">
+                <li class="fListItem">Support</li>
+                <li class="fListItem">Refund</li>
+                <li class="fListItem">FAQ</li>
+                <li class="fListItem">Feedback</li>
+                <li class="fListItem">Stories</li>
+            </ul>
+        </div>
+        <div class="footerMenu">
+            <h1 class="fMenuTitle">Products</h1>
+            <ul class="fMenuList">
+                <li class="fListItem">Titan</li>
+                <li class="fListItem">Rolex</li>
+                <li class="fListItem">Maxima</li>
+                <li class="fListItem">Sonata</li>
+                <li class="fListItem">Apple</li>
+            </ul>
+        </div>
+    </div>
+    <div class="footerRight">
+        <div class="fRightMenu">
+            <h1 class="fMenuTitle">Subscribe to our newsletter</h1>
+            <div class="fMail">
+                <input type="text" placeholder="your@gmail.com" class="fInput">
+                <button class="fButton">Join!</button>
+            </div>
+        </div>
+        <div class="fRightMenu">
+            <h1 class="fMenuTitle">Follow Us</h1>
+            <div class="icon">
+                <i class="fa fa-facebook" class="fIcon"></i>
+                <i class="fa fa-whatsapp" class="fIcon"></i>
+                <i class="fa fa-twitter" class="fIcon"></i>
+                <i class="fa fa-instagram" class="fIcon"></i>
+                <i class="fa fa-youtube" class="fIcon"></i>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="index.js"></script>
+</body>
