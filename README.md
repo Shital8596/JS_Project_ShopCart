@@ -10,22 +10,22 @@
   I have created a search bar and some links.
   on left side there is logo. And on the rightmost side there is cart.
   
-#Slider Section
+# Slider Section
   In this section slider of 5 images is created using JavaScript.
   
-#Feature Section
+# Feature Section
   This section contains few images and text.
   
-#Payment Section 
+# Payment Section 
   This section is created to take the user information and card details.This section is kept display: none, and using JavaScript It is created visible.
 
-#Product Section
+# Product Section
   This section gives extra information about the product. This is created by using JS.
   
-#Cart Section
+# Cart Section
   Cart section gives items added in the cart. When user clicks on button add to cart , item is added in the cart. This is done using JS.
   
-#Footer
+# Footer
  This section is footer part of the website which includes some information and social media links.
 
 
